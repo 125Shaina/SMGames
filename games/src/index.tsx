@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {HashRouter, Route, Routes} from "react-router";
+import {HashRouter, Outlet, Route, Routes} from "react-router";
+import MyComponent from "./RockPaperScissors";
+import PlayRSP from "./RSPPlay";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -12,16 +14,16 @@ root.render(
   <React.StrictMode>
     <HashRouter>
         <Routes>
-            <Route path="/" element={null}>
-                <Route path ="/TicTacToe" element={null}>
+            <Route path="/" element={<Outlet/>}>
+                <Route path ="/TicTacToe" element={<Outlet/>}>
                     <Route path = "/TicTacToe/Play" element={null}>
 
                     </Route>
                     <Route index element={null}/>
                 </Route>
-                <Route path="/RockPaperScissors" element={null}>
-                    <Route path = "/RockPaperScissors/Play" element={null}>
-
+                <Route path="/RockPaperScissors" element={<MyComponent/>}>
+                    <Route path = "/RockPaperScissors/Play" element={<PlayRSP/>}>
+`
                     </Route>
                     <Route index element={null}/>
                 </Route>
