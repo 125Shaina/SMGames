@@ -4,8 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {HashRouter, Outlet, Route, Routes} from "react-router";
-import MyComponent from "./RockPaperScissors";
 import PlayRSP from "./RSPPlay";
+import RockPaperScissorsGame from "./RockPaperScissors";
+import TicTacToeGame from "./TicTacToe";
+import TTTPlay from "./TTTPlay";
+import NavBar from "./NavBar";
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,14 +18,14 @@ root.render(
   <React.StrictMode>
     <HashRouter>
         <Routes>
-            <Route path="/" element={<Outlet/>}>
-                <Route path ="/TicTacToe" element={<Outlet/>}>
-                    <Route path = "/TicTacToe/Play" element={null}>
+            <Route path="/" element={<NavBar/>}>
+                <Route path ="/TicTacToe" element={<TicTacToeGame/>}>
+                    <Route path = "/TicTacToe/Play" element={<TTTPlay/>}>
 
                     </Route>
                     <Route index element={null}/>
                 </Route>
-                <Route path="/RockPaperScissors" element={<MyComponent/>}>
+                <Route path="/RockPaperScissors" element={<RockPaperScissorsGame/>}>
                     <Route path = "/RockPaperScissors/Play" element={<PlayRSP/>}>
 `
                     </Route>

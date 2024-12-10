@@ -1,6 +1,6 @@
 import {Outlet} from "react-router";
 
-export default function MyComponent()
+export default function RockPaperScissorsGame()
 {
  return (
      <div>
