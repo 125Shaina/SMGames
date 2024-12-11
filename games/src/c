@@ -1,0 +1,64 @@
+
+
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useState } from 'react';
+const TicTacToeGame: React.FC = () => {
+
+
+   const [board, setBoard] = useState(Array(9).fill(null));
+   const [isXNext, setIsXNext] = useState(true);
+   const winner = calculateWinner(board);
+
+
+   const handleClick = (index: number) => {
+       if (board[index] || winner) return;
+       const newBoard = [...board];
+       newBoard[index] = isXNext ? 'X' : 'O';
+       setBoard(newBoard);
+       setIsXNext(!isXNext);
+   };
+
+
+   const restartGame = () => {
+       setBoard(Array(9).fill(null));
+       setIsXNext(true);
+   };
+
+
+
+
+
+
+   return (
+       <div>
+
+
+           <div >
+
+
+               <p>
+                   Players take turns marking a square with X or O. The first player to
+                   align three marks in a row wins. If all squares are filled without a
+                   winner, it's a draw.
+               </p>
+               {
+                   <div>
+                       <h2>{winner ? `Winner: ${winner}` : `Next Player: ${isXNext ? 'X' : 'O'}`}</h2>
+                       <div style={{display: 'grid', gridTemplateColumns: 'repeat(3, 100px)', gap: '10px'}}>
+                           {board.map((value, index) => (
+                               <button
+                                   key={index}
+                                   onClick={() => handleClick(index)}
+                                   style={{width: '100px', height: '100px', fontSize: '24px'}}
+                               >
+                                   {value}
+                               </button>
+                           ))}
+                       </div>
+                       <button onClick={restartGame}>Start Over</button>
+                   </div>
+               }
+               <Link to="/">Back to Home</Link>
+           </div> </div>
+   )
