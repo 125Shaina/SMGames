@@ -35,7 +35,7 @@ const HomePage: React.FC = () => {
 
     return (
         <div style={homeStyle}>
-            <h1>Welcome to Alisha's Games!</h1>
+            <h1>Welcome to Shaina's Games!</h1>
             <p>Choose a game to play and enjoy!</p>
             <div style={gameStyle}>
                 <div style={cardStyle}>
