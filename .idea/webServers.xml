@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="45117bdf-2689-475a-a778-11e230d26eed" name="s" url="https://github.com/125Shaina/SMGames.git">
+        <fileTransfer accessType="SFTP" host="localhost" port="22" sshConfigId="71964157-ec6f-4d15-9acd-d0258516e31c" sshConfig="s">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
