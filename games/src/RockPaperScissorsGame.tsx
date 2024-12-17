@@ -48,11 +48,7 @@ const RockPaperScissorsGame = () => {
                 <p>
                     Choose Rock, Paper, or Scissors. The computer will also choose. The
                     winner is decided as follows:
-                    <ul>
-                        <li>Rock beats Scissors</li>
-                        <li>Scissors beats Paper</li>
-                        <li>Paper beats Rock</li>
-                    </ul>
+
                 </p>
                 {
                     <div>

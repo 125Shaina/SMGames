@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import {Link, Outlet} from 'react-router';
 
 
 const TicTacToeRules: React.FC = () => {
@@ -21,25 +21,24 @@ const TicTacToeRules: React.FC = () => {
         <div>
 
 
-
-
-            <div >
+            <div>
                 <h1>Tic-Tac-Toe Rules</h1>
-    <iframe
-    style={videoStyle}
-    src="https://fake-videolink.com"
-    title="Tic-Tac-Toe Instructions"
-        ></iframe>
-        <p>
-        Players take turns marking a square with X or O. The first player to
-    align three marks in a row wins. If all squares are filled without a
-    winner, it's a draw.
-    </p>
-    <Link to="/">Back to Home</Link> |{' '}
-    <Link to="/tic-tac-toe/game">Play Game</Link>
-    </div>
-    </div>
-);
+
+                <p>
+                    Players take turns marking a square with X or O. The first player to
+                    align three marks in a row wins. If all squares are filled without a
+                    winner, it's a draw.
+                </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/USEjXNCTvcc?si=G3Ai-WaxbtJnSkex"
+                        title="YouTube video player" frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                <Outlet/>
+                <Link to="/">Back to Home</Link> |{' '}
+                <Link to="/tic-tac-toe/game">Play Game</Link>
+            </div>
+        </div>
+    );
 };
 
 

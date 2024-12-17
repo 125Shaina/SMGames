@@ -9,6 +9,7 @@ import TicTacToeRules from './TicTacToeRules';
 import RockPaperScissors from './RockPaperScissorsGame';
 import RockPaperScissorsGame from './RockPaperScissorsGame';
 import RockPaperScissorsRules from './RockPaperScissorsRules';
+import Githubsearch from './githubsearch';
 import HomePage from './HomePage';
 
 
@@ -19,7 +20,9 @@ root.render(
     <React.StrictMode>
         <HashRouter>
             <Routes>
+                <Route path="/githubsearch" element={<Githubsearch/>} />
                 <Route path="/" element={<App />}>
+
                     <Route index element={<HomePage />} />
                     <Route path="tic-tac-toe" element={<TicTacToe />}>
                         <Route index element={<TicTacToeRules />} />
