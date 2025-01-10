@@ -10,6 +10,7 @@ import RockPaperScissors from './RockPaperScissorsGame';
 import RockPaperScissorsGame from './RockPaperScissorsGame';
 import RockPaperScissorsRules from './RockPaperScissorsRules';
 import Githubsearch from './githubsearch';
+import Weather from './weather';
 import HomePage from './HomePage';
 
 
@@ -21,6 +22,7 @@ root.render(
         <HashRouter>
             <Routes>
                 <Route path="/githubsearch" element={<Githubsearch/>} />
+                <Route path="/weather" element = {<Weather/>} />
                 <Route path="/" element={<App />}>
 
                     <Route index element={<HomePage />} />
