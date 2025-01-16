@@ -102,15 +102,19 @@ export default function Weather() {
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
                         placeholder="Search for a location "
-                        style={{padding: "8px", width: "60%"}}
+                        style={{padding: "8px", width: "60%", borderRadius: "20px"}}
                     />
                     <button
                         onClick={handleButtonClick}
                         style={{
                             padding: "8px 16px",
                             marginLeft: "10px",
-                            backgroundColor: "blueviolet",
-                            border: "none"
+                            backgroundColor: "white",
+                            border: "blueviolet",
+                            borderWidth: "10px",
+                            borderRadius: "20px",
+                            alignItems: "center",
+                            display: "flex"
                         }}
                     >
                         Get Weather
@@ -126,7 +130,8 @@ export default function Weather() {
                         >
                             <h3>{day.name}</h3>
                             <div style={{
-                                border: "none",
+                                border: " solid white",
+                                borderWidth: "10px",
                                 borderRadius: "8px",
                                 paddingBottom: "10px",
                                 paddingLeft: "10px",
@@ -141,12 +146,15 @@ export default function Weather() {
                                     alt={day.shortForecast}
                                     style={{margin: "10px"}}
                                 />
-                                <div>
+                                <div >
                                     <h4>{day.shortForecast}</h4>
-                                    <p>{day.temperature}°{day.temperatureUnit}</p>
+                                    <div style = {{alignItems: "center",display: "flex",margin: "10px", width: "125px",height:"120px",fontSize:"50px", border: " solid white", borderWidth: "10px", borderRadius: "8px",}}>
+                                        <p>{day.temperature}°{day.temperatureUnit}</p>
+
+                                    </div>
                                     <p>
 
-                                        {day.probabilityOfPrecipitation.value} {day.probabilityOfPrecipitation.value && "% Chance of Rain"}
+                                    {day.probabilityOfPrecipitation.value} {day.probabilityOfPrecipitation.value && "% Chance of Rain"}
                                     </p>
                                     <p>{day.detailedForecast}</p>
                                 </div>
