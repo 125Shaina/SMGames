@@ -11,6 +11,8 @@ export default function Weather() {
         icon: string;
         probabilityOfPrecipitation: { value: number  };
     }
+    document.title=("Weathering the Storm: Forecast");
+
     const defaultAddress = "2 Robertsville Rd, Freehold, NJ";
     const ApiKey = "b8568cb9afc64fad861a69edbddb2658";
 
@@ -94,15 +96,15 @@ export default function Weather() {
         setAddress(inputValue);
     }
     return (
-        <div style={{backgroundColor: '#BBD4F9', padding: "0%"}}>
-            <div style={{fontFamily: "Arial, sans-serif", margin: "20px"}}>
-                <div style={{paddingTop: "20px"}}>
+        <div style={{backgroundImage: `url(https://t3.ftcdn.net/jpg/08/01/10/36/360_F_801103621_TnK26hR4z5AbmU6iQN9jtb6AkWpupOkR.jpg)`,width:"2150px", height:"3000px", paddingTop: "30px"}}>
+            <div style={{  backgroundColor:" rgba(99,102,107,.7)",justifyContent:"center", alignItems: "middle",display:"column", fontFamily: "Arial, sans-serif", marginLeft: "540px", width : "50%"}}>
+                <div style={{paddingTop: "0px"}}>
                     <input
                         type="text"
                         value={inputValue}
                         onChange={(e) => setInputValue(e.target.value)}
                         placeholder="Search for a location "
-                        style={{padding: "8px", width: "60%", borderRadius: "20px"}}
+                        style={{padding: "8px", width: "50%", borderRadius: "25px"}}
                     />
                     <button
                         onClick={handleButtonClick}
@@ -113,8 +115,7 @@ export default function Weather() {
                             border: "blueviolet",
                             borderWidth: "10px",
                             borderRadius: "20px",
-                            alignItems: "center",
-                            display: "flex"
+
                         }}
                     >
                         Get Weather
@@ -134,12 +135,14 @@ export default function Weather() {
                                 borderWidth: "10px",
                                 borderRadius: "8px",
                                 paddingBottom: "10px",
-                                paddingLeft: "10px",
+                                paddingLeft: "20px",
                                 paddingRight: "10px",
 
                                 marginBottom: "10px",
                                 display: "flex",
                                 alignItems: "center",
+                                justifyContent:"center"
+
                             }}>
                                 <img
                                     src={day.icon}
@@ -148,7 +151,7 @@ export default function Weather() {
                                 />
                                 <div >
                                     <h4>{day.shortForecast}</h4>
-                                    <div style = {{alignItems: "center",display: "flex",margin: "10px", width: "125px",height:"120px",fontSize:"50px", border: " solid white", borderWidth: "10px", borderRadius: "8px",}}>
+                                    <div style = {{justifyContent:"centerenter",  alignItems: "center",display: "flex",margin: "5px", width: "125px",height:"110px",fontSize:"55px", border: " solid white", borderWidth: "10px", borderRadius: "8px",}}>
                                         <p>{day.temperature}°{day.temperatureUnit}</p>
 
                                     </div>
