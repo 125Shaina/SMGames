@@ -96,8 +96,8 @@ export default function Weather() {
         setAddress(inputValue);
     }
     return (
-        <div style={{backgroundImage: `url(https://t3.ftcdn.net/jpg/08/01/10/36/360_F_801103621_TnK26hR4z5AbmU6iQN9jtb6AkWpupOkR.jpg)`,width:"2150px", height:"3000px", paddingTop: "30px"}}>
-            <div style={{  backgroundColor:" rgba(99,102,107,.7)",justifyContent:"center", alignItems: "middle",display:"column", fontFamily: "Arial, sans-serif", marginLeft: "540px", width : "50%"}}>
+        <div style={{backgroundImage: `url(https://health.wyo.gov/wp-content/uploads/2020/08/fluffy-clouds-and-blue-sky-2.jpg)`,backgroundSize:"cover", paddingTop: "30px"}}>
+            <div style={{  backgroundColor:" rgba(99,102,107,.7)",justifyContent:"center", alignItems: "middle", fontFamily: "Arial, sans-serif", marginLeft: "540px", width : "50%"}}>
                 <div style={{paddingTop: "0px"}}>
                     <input
                         type="text"

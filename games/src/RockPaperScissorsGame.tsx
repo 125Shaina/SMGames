@@ -40,11 +40,7 @@ const RockPaperScissorsGame = () => {
 
     return (
         <div>
-
-
             <div>
-
-
                 <p>
                     Choose Rock, Paper, or Scissors. The computer will also choose. The
                     winner is decided as follows:
